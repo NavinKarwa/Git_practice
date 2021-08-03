@@ -1,14 +1,14 @@
 pipeline {
      agent any
      stages {
-          stage("Compile") {
+          stage('Compile') {
                steps {
-                    sh "gcc src/*.c -o obj/calc"
+                    sh 'gcc src/*.c -o obj/calc'
                }
           }
-          stage("Run") {
+          stage('Run') {
                steps {
-                    sh "./obj/calc" 
+                    sh './obj/calc' 
                }
           }
       }
