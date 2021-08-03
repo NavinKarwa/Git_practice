@@ -3,12 +3,12 @@ pipeline {
      stages {
           stage("Compile") {
                steps {
-                    bash "gcc src/*.c -o obj/calc"
+                    sh "gcc src/*.c -o obj/calc"
                }
           }
           stage("Run") {
                steps {
-                    bash "./obj/calc" 
+                    sh "./obj/calc" 
                }
           }
       }
