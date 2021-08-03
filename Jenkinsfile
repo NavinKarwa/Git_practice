@@ -3,12 +3,12 @@ pipeline {
      stages {
           stage('Compile') {
                steps {
-                    sh 'gcc src/*.c -o obj/calc'
+                    sh 'gcc calculator/src/*.c -o calculator/obj/calc'
                }
           }
           stage('Run') {
                steps {
-                    sh './obj/calc' 
+                    sh './calculator/obj/calc' 
                }
           }
       }
